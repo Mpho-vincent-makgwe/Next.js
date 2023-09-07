@@ -1,0 +1,10 @@
+{
+    "products":[
+        {"id": "p1", "name": "Product 1", "description": "This is Product 1 of Dummy-BackEnd Data"},
+        {"id": "p2", "name": "Product 2", "description": "This is Product 2 of Dummy-BackEnd Data"}, 
+        {"id": "p3", "name": "Product 3", "description": "This is Product 3 of Dummy-BackEnd Data"},
+        {"id": "p4", "name": "Product 4", "description": "This is Product 4 of Dummy-BackEnd Data"},
+        {"id": "p5", "name": "Product 5", "description": "This is Product 5 of Dummy-BackEnd Data"}
+       
+    ]
+}
