@@ -7,7 +7,7 @@ const Home=(props)=> {
   return (
     <>
     <ul>
-      {products.map(product=><li key={product.id}><h4><Link href={`/${product.id}`}><b>{product.name}</b></Link></h4></li>)}
+      {products.map(product=><li key={product.id}><h4><Link href={`/products/${product.id}`}><b>{product.name}</b></Link></h4></li>)}
     </ul>
     </>
   )
