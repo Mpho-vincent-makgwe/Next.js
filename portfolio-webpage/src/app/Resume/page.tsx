@@ -21,10 +21,10 @@ export const metadata: Metadata = {
   
 export default function Resume() {
     return (
-      
-      <div className={`${monsFont.variable} font-mont bg-gray-500 p-4 m-2 rounded-lg shadow-md`}>
-           <ProfilePictur />
-     <div className="flex">
+      <>      <div className={`${monsFont.variable}font-mont  tracking-tighter scroll-p-96 border-b-violet-700 border-l-sky-600 text-neutral-50  p-4 m-2 rounded-lg shadow-md bg-slate-600`} >
+        <div className="bg-slate-500 rounded-3xl"><ProfilePictur /></div>
+           
+     <div className="flex rounded-md bg-gray-700">
         <div className="w-1/2  text-freen justify-center">
           
           <AboutMe/>
@@ -37,6 +37,7 @@ export default function Resume() {
           <Projects/>
         </div>
       </div>
-      </div>
+      </div></>
+
     )
   }

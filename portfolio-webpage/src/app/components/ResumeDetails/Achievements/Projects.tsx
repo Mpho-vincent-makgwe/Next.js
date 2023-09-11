@@ -1,5 +1,5 @@
 const Projects = () => {return(
-    <div className={`hover:bg-gray-300 rounded`}>
+    <div className={`hover:bg-gray-300 rounded hover:text-black`}>
       <h2 className="font-bold underline">Projects</h2>
       <ul>
         <li>Digital Resume- A Digital Resume built with HTML and CSS.</li>

@@ -1,6 +1,6 @@
 const Education = () => {
     return(
-    <div className={`hover:bg-gray-300 rounded`}>
+    <div className={`hover:bg-gray-300 rounded hover:text-black`}>
       <h2 className="font-bold underline">Education</h2>
       <ul>
         <li>Mechanical Engineering N5, Orbit TVET College (2019-2021)</li>

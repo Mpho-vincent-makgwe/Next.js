@@ -6,8 +6,6 @@ const fireBase = `https://nextjs-course-9b23d-default-rtdb.firebaseio.com/sales.
 const LastSalsePage = (props) => {
     const [sales, setSales]= useState(props.sales);
     const [isLoading, setIsLoading]=useState(false);
-
-
     useEffect(()=>{
         setIsLoading(true);
         fetch(`${fireBase}`)

@@ -1,5 +1,5 @@
 const AboutMe = () =>{return (
-    <div className={`hover:bg-gray-300 rounded`}>
+    <div className={`hover:bg-gray-300 rounded hover:text-black`}>
       <h2 className="font-bold underline">About Me</h2>
       <p>
         Highly motivated and enthusiastic software developer with experience in mechanical engineering.

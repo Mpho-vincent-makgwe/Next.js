@@ -1,0 +1,8 @@
+const BGImage = ({children}:any) => {
+    return (
+        <div style={{backgroundImage: `url(https://lh3.googleusercontent.com/pw/AIL4fc9xibtqeng_RkQAdD1_QdeCggjWU5OOmI083yKLwVLnm1DxcwXdL-IC9JJswKAp2Q6xNZbGDiWZLxYQ81lEYkNPjV4kX1S3Cg-TA6zF6sHGIJDIL53hqqtihy8YBlQdPRq01-TdwHU77VGvkftoMNW5-uuFFFsBD-yFC2uwA43WvaC3Yog2OuqwBnCYNApippCsgw93S9HJuTkZn7q3zLH5BD3GA0GBR3oZIt9Y5sGLeFSXzohjXawAQLWhAKzjWmRgQKChyumRHgXgkPV-FijJNSj8Db-YY7MQv98VwvuzP8ZkBAsF8sPCEOT7dkrbaY0Le-a1agL9CLgBFFB51jfysHL-DcssnhXkcJRyiPJrtCMXsozajjL0NjIHT2WqmXd4x7bsXr8nLoYBC6ZT1F8N_-8sCJOtUAdAcTEpU87CUXYBtd5hpn66MoBDiomWnbN6L2Ve8z7wkRnUWDtzVqSIfJzJhj31D37AJQcZGI3zIUB6cKxAsy1IgPFwldsUGR_Wqn5TJkdUAhNq8pFXSUZ4yCe1daUfObnDz4IR9HeKXABDk9K5FCUUTGkLPwtvQ8LKr83APTh_RNFibCPTk6j-jHw0wn71LFbrl6VYjpXJGVHjc_QWmX03fJaYR2PrK9_sQb1UUg5Pgqr9VWtV8PFeaKJIQrucM0LbDas_Kgkr249MjCPXyEK91AG5cVn3wYRSO4rvFY2xORPw7KQlGk6icXRlpDTFTinAW-EGDloUn_8rypoT79oZt2x5858gXMpgb07WyIyhp8kzFcSMjPIQlA4gNM5U38OAUlp0VVR6FeB0ZspKtEfS8YNiAacT1GN-OvyxpAbvOACZ9Mvy-01LNW6LWRHYmSs-ZLwQHUOAveg4wOVanuvSDEEU2O6QbxZQMyUehLtKPu7h2ksrj_jYOdqKVZvAvpDDJhWnUp41zXtjq1dPWVFK1MzVIw=w824-h824-s-no?authuser=0)`,
+        backgroundSize: 'cover'}}>{children}</div>
+    )
+}
+
+export default BGImage
