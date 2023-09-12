@@ -5,10 +5,8 @@ const getRepos = async()=>{
     const repos = await fetch('https://api.github.com/users/Mpho-vincent-makgwe/repos')
     return repos.json()
 }
-
 const ProjectsPage = async () => {
     const repos = await getRepos();
-    console.log(repos);
     return (
         <div>{repos.map((repo: any)=>{
             return(

@@ -4,6 +4,7 @@ import ResultsTitle from "@/components/events/results-title";
 import { Fragment } from "react";
 import Button from "@/components/ui/button";
 import ErrorAlert from "@/components/events/error-alert/error-alert";
+import Head from "next/head";
 const FilteredEvent=(props)=>{
 const { events, cal, filteredData } = props;
 const FilteredEvents = events;
@@ -24,16 +25,21 @@ if(props.hasEror){
                 <ErrorAlert>
                     <h1>There is no event from that </h1>
                     </ErrorAlert>
-                
             </div>
         )
     }
     return(
+        <>
+        <Head>
+        <title>Filtered Events</title>
+      <mete name='description' content={`All Events for ${numMonth}/${numYear}`}/>
+        </Head>
         <Fragment>
             
         <ResultsTitle date={date}/>
         <EventList list={FilteredEvents}/>
-        </Fragment>
+        </Fragment></>
+        
     )
 }
 export const getServerSideProps = async ({params})=>{
@@ -53,7 +59,6 @@ export const getServerSideProps = async ({params})=>{
             props:{hasEror: true}
             }}
             const FilteredEvents = await getFilteredEvents({year : numYear,month: numMonth});
-
             return{
         props: {
         events: FilteredEvents,

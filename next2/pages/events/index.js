@@ -2,6 +2,7 @@ import { getAllEvents } from "@/helpers/api-utils";
 import EventList from "@/components/events/EventList";
 import EventSearch from "../../components/events/events-search";
 import { useRouter } from "next/router";
+import Head from "next/head";
 const AllEvents=({allEvents})=>{
     const events  = allEvents;
     const router = useRouter();
@@ -11,6 +12,10 @@ const findEventsHandler=(year,month)=>{
 };
     return(
         <>
+        <Head>
+        <title>All Events</title>
+      <mete name='description' content="All the contents"/>
+        </Head>
         <EventSearch onSearch={findEventsHandler}/>
         <EventList list={events}/></>
     )

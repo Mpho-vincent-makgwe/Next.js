@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import EventSummary from "@/components/event-detail/event-summary";
 import EventLogistics from "@/components/event-detail/event-logistics";
 import EventContent from "@/components/event-detail/event-content";
+import Head from "next/head";
 
 
 const EventDetail=({ evente })=>{
@@ -12,6 +13,10 @@ if(!event){return <div className="center"><p>Loading..</p></div>}
 
 return(
     <>
+    <Head>
+    <title>{title}</title>
+      <mete name='description' content={description}/>
+    </Head>
     <Fragment>
         <EventSummary title={title}/>
         <EventLogistics date={date} address={Location} image={image} imageAlt={title}/>

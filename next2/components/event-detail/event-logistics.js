@@ -17,7 +17,7 @@ function EventLogistics(props) {
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>
-        <img src={`/${image}`} alt={imageAlt} />
+        <Image src={`/${image}`} width={1000} hieght={2000} alt={imageAlt} />
       </div>
       <ul className={classes.list}>
         <LogisticsItem icon={Calender}>

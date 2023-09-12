@@ -1,4 +1,5 @@
 // import Link from "next/link";
+import Image from 'next/image';
 import theme from './event-item.module.css'
 import Calender from '../icons/Calender-icon';
 import Button from "../ui/button";
@@ -16,7 +17,7 @@ const ExploreLink = `/events/${id}`;
     return(
         <>
         <li className={theme.item}>
-            <img src={ '/' + image} alt={`${title}`}/>
+            <Image src={ '/' + image} width={1100} height={1500} alt={`${title}`}/>
             <div className={theme.content}>
                 <div><h2>{title}</h2></div>
                 <div className={theme.date}><Calender/><time>{readableDateStr}</time></div>
