@@ -7,13 +7,12 @@ export default function Home() {
   const [feedbackItems, setFeedbackItems] = useState([]);
   const emailRef = useRef();
   const feedbackRef = useRef();
-  
+
   const submitFormHandler =async(event)=>{
   event.preventDefault();
   const enteredEmail = emailRef.current.value;
   const enteredFeedback = feedbackRef.current.value;
   const reqBody = {email: enteredEmail, text: enteredFeedback };
-
   const response =await fetch('./api/feedback',{
     method: 'POST',
     body:JSON.stringify(reqBody),
@@ -23,6 +22,7 @@ export default function Home() {
   })//{email:'test@gmail.com', text: 'Some Feedback'}
   const data = await response.json();
 }
+
 const loadFeedBackHandler =async()=>{
   const response = await fetch('./api/feedback')
   const data = await response.json();

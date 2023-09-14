@@ -7,8 +7,9 @@ import ErrorAlert from "@/components/events/error-alert/error-alert";
 import Head from "next/head";
 const FilteredEvent=(props)=>{
 const { events, cal, filteredData } = props;
+
 const FilteredEvents = events;
-const date = new Date(cal.year, cal.month - 1)
+const date = new Date(cal.year, cal.month - 1);
 if(props.hasEror){
         return<Fragment><ErrorAlert><p>Invalid Filter please Adjust your values</p>
         <div className={`center`}><Button link='/events'>Show AllEvents</Button></div>
@@ -32,10 +33,9 @@ if(props.hasEror){
         <>
         <Head>
         <title>Filtered Events</title>
-      <mete name='description' content={`All Events for ${numMonth}/${numYear}`}/>
+        <meta name='description' content={`All Events for ${cal.year}/${cal.month}`}/>
         </Head>
         <Fragment>
-            
         <ResultsTitle date={date}/>
         <EventList list={FilteredEvents}/>
         </Fragment></>

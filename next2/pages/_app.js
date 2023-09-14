@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/layout";
 import '@/styles/globals.css'
 import Head from "next/head";
+import { Fragment } from "react";
 export default function App({ Component, pageProps }) {
   return (
     <><Head>
@@ -9,6 +10,9 @@ export default function App({ Component, pageProps }) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/mpho.svg" />
   </Head>
-  <Layout><Component {...pageProps}/></Layout>
-   </>)
+    <Fragment>
+  <Layout>
+    <Component {...pageProps}/>
+    </Layout>
+   </Fragment></>)
 }

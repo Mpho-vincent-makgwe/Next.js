@@ -3,6 +3,7 @@ import EventList from "@/components/events/EventList";
 import EventSearch from "../../components/events/events-search";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { Fragment } from "react";
 const AllEvents=({allEvents})=>{
     const events  = allEvents;
     const router = useRouter();
@@ -14,10 +15,15 @@ const findEventsHandler=(year,month)=>{
         <>
         <Head>
         <title>All Events</title>
-      <mete name='description' content="All the contents"/>
+        <meta name='description' content="All the contents"/>
         </Head>
-        <EventSearch onSearch={findEventsHandler}/>
-        <EventList list={events}/></>
+        <Fragment>
+            <body>
+                <EventSearch onSearch={findEventsHandler}/>
+                <EventList list={events}/>
+            </body>
+        </Fragment>
+        </>
     )
 }
 export const getStaticProps =async()=>{

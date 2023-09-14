@@ -1,5 +1,10 @@
 export const getAllEvents = async ()=> {
-const events = await fetch('https://nextjs-course-9b23d-default-rtdb.firebaseio.com/events.json');
+const events = await fetch('https://nextjs-course-9b23d-default-rtdb.firebaseio.com/events.json',{
+  revalidation: 20
+});
+if(!events){
+  return<div>Loading...</div>
+}
 const data = await events.json();
 const res = [];
 for (const key in data){

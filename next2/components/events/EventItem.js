@@ -17,7 +17,7 @@ const ExploreLink = `/events/${id}`;
     return(
         <>
         <li className={theme.item}>
-            <Image src={ '/' + image} width={1100} height={1500} alt={`${title}`}/>
+            <Image src={ '/' + image} width={1000} height={1000} alt={`${title}`}/>
             <div className={theme.content}>
                 <div><h2>{title}</h2></div>
                 <div className={theme.date}><Calender/><time>{readableDateStr}</time></div>

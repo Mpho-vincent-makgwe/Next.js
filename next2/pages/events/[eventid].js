@@ -4,25 +4,28 @@ import EventSummary from "@/components/event-detail/event-summary";
 import EventLogistics from "@/components/event-detail/event-logistics";
 import EventContent from "@/components/event-detail/event-content";
 import Head from "next/head";
+import Comments from "@/components/input/comments";
 
 
 const EventDetail=({ evente })=>{
 const event = evente;
-const { title, date, Location, image, description } = event
+const { title, date, Location, image, description, id } = event
 if(!event){return <div className="center"><p>Loading..</p></div>}
 
 return(
     <>
     <Head>
     <title>{title}</title>
-      <mete name='description' content={description}/>
+      <meta name='description' content={description}/>
     </Head>
+
     <Fragment>
         <EventSummary title={title}/>
         <EventLogistics date={date} address={Location} image={image} imageAlt={title}/>
         <EventContent>
             <p>{description}</p>
         </EventContent>
+        <Comments eventId={id}/>
     </Fragment>
     </>
 )
@@ -40,7 +43,7 @@ export const getStaticProps =async ({params}) => {
     const pagePATH =await getEventById(eventId);
 return{
     props: {
-        evente: pagePATH
+        evente: pagePATH,
     },
     revalidate: 30
 }
