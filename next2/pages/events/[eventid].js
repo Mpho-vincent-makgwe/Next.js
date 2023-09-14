@@ -5,12 +5,15 @@ import EventLogistics from "@/components/event-detail/event-logistics";
 import EventContent from "@/components/event-detail/event-content";
 import Head from "next/head";
 import Comments from "@/components/input/comments";
-
+import classes from './eventid.module.css'
 
 const EventDetail=({ evente })=>{
 const event = evente;
 const { title, date, Location, image, description, id } = event
-if(!event){return <div className="center"><p>Loading..</p></div>}
+
+if(!event){return <div className="center"><div className={classes.loading}>
+<div className={classes.spinner}/>
+</div></div>}
 
 return(
     <>

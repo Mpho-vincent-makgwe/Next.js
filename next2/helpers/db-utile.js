@@ -9,7 +9,6 @@ const insertDocument =async(client, collection,document)=>{
     const result = await db.collection(collection).insertOne(document);
     return result;
 }
-
 export const getAllComments = async(client, collection,sort)=>{
     const db = client.db();
     const allComments = await db
