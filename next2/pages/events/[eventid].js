@@ -33,22 +33,30 @@ return(
     </>
 )
 }
-export const getStaticPaths = async()=>{
+// This function is used to generate paths for static pages.
+export const getStaticPaths = async ()=>{
+    // Fetch a list of featured events (async operation).
     const events = await getFeaturedEvents();
+     // Transform the list of events into an array of path objects.
     const paths = events.map(event => ({params: {eventid: event.id}}))
+    // Return an object with paths and a fallback setting.
     return {
-        paths: paths,
+        paths: paths,// List of paths for pre-rendering
         fallback: 'blocking',
     }
 }
-export const getStaticProps =async ({params}) => {
+// This function is used to fetch data for a specific page.
+export const getStaticProps = async ({params}) => {
+    // Extract the event ID from the params object.
     const eventId = params.eventid;
-    const pagePATH =await getEventById(eventId);
+    // Fetch data for the specific event using the event ID (async operation).
+    const pagePATH = await getEventById(eventId);
 return{
     props: {
         evente: pagePATH,
     },
     revalidate: 30
+    //this is the most inportant part to discuss with coach.
 }
 }
 export default EventDetail;

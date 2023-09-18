@@ -4,6 +4,7 @@ import NewsletterRegistration from "@/components/input/newsletter-registration";
 import { Fragment } from "react";
 export default function Home(props) {
 
+  
   return (
     <Fragment>
         <div>
@@ -11,8 +12,6 @@ export default function Home(props) {
       <EventList list={props.events}/>
       </div>
     </Fragment>
-
-
   )
 }
 export const getStaticProps = async ()=>{

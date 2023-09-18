@@ -27,7 +27,7 @@ const findEventsHandler=(year,month)=>{
     )
 }
 export const getStaticProps =async()=>{
-const events =await getAllEvents();
+const events = await getAllEvents();
     return{
         props: {
             allEvents: events

@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb';
 
-const connectDataBase = async()=>{
+const connectDataBase = async ()=>{
     const client = await MongoClient.connect('mongodb+srv://mphomakgwe4:CwjXciRRspzKhWQZ@nextjsexploring.fbmkwb0.mongodb.net/nextapp_emails?');
 return client;
 };

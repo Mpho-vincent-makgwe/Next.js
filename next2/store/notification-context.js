@@ -10,14 +10,11 @@ export const NotificationContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (acNotf && (acNotf.status === "success" || acNotf.status === "error")) {
-            const timer = setTimeout(() => {
+             setTimeout(() => {
                 setActNotf(null);
             }, 3000);
-            return()=>{
-                clearTimeout(timer)
-            }
-        }
-    }, []);
+            return
+    }}, [acNotf]);
 
     const showNotificationHandler = (notifData) => {
         setActNotf(notifData);

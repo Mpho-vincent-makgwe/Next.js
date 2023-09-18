@@ -20,7 +20,6 @@ export const getFeaturedEvents= async () => {
     return allEvents.filter((event) => event.isFeatured);
   }
 
-
   export const  getFilteredEvents = async(dateFilter)=> {
     const allEvents = await getAllEvents();
     const { year, month } = dateFilter;

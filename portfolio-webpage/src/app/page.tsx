@@ -1,6 +1,5 @@
-import Link from "next/link"
 import type { Metadata } from 'next'
-import Image from "next/image"
+import Hero from "./components/Hero/Hero"
 
 export const metadata: Metadata = {
   title: 'Welcome to my portfolio',
@@ -9,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-pink-500">
+    <main className="bg-gray-900 p-4 text-xl font-extrabold">
 <section className="flex-start flex-col paddings mb-16" >
 <div >
-  <Image alt="mei" src={`/mpho.jpg`} width={500} height={600}/>
+<Hero/>
 </div>
   </section>
     </main>
