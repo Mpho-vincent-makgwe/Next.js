@@ -20,13 +20,13 @@ const PostContent=({ post })=> {
     paragraph(paragraph) {
       const { node } = paragraph;
 
-      if (node.children[0].type === 'image') {
+      if (node.children[0].tagName === 'img') {
         const image = node.children[0];
 
         return (
           <div className={theme.image}>
             <Image
-              src={`/images/posts/${post.slug}/${image.url}`}
+              src={`/images/posts/${post.slug}/${image.properties.url}`}
               alt={image.alt}
               width={600}
               height={300}
@@ -39,12 +39,12 @@ const PostContent=({ post })=> {
     },
 
     code(code) {
-      const { language, value } = code;
+      const { language, children } = code;
       return (
         <SyntaxHighlighter
           style={atomDark}
           language={language}
-          children={value}
+          children={children}
         />
       );
     },
