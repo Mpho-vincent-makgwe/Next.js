@@ -53,7 +53,7 @@ const PostContent=({ post })=> {
   return (
     <article className={theme.content}>
       <PostHeader title={post.title} image={imagePath} />
-      <ReactMarkdown renderers={customRenderers}>{post.content}</ReactMarkdown>
+      <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
     </article>
   );
 }
